@@ -5,8 +5,8 @@
 //  Created by Arvin Shen on 10/17/23.
 //
 
-import XCTest
 @testable import Counter
+import XCTest
 
 final class CounterTests: XCTestCase {
 

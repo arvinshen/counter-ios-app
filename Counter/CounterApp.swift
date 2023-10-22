@@ -5,8 +5,8 @@
 //  Created by Arvin Shen on 10/17/23.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 @main
 struct CounterApp: App {
