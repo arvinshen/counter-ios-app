@@ -1,0 +1,15 @@
+// Temporary generated en files for enum Generation
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
+// Source: https://github.com/SwiftGen/SwiftGen/discussions/1071#discussioncomment-7209188
+
+
+
+
+
+"Counter %@ at %@" = "Counter %1$@ at %2$@";
+"Counter at %@" = "Counter at %@";
+"Key.Test.One" = "Test 1";
+"Key.Test.Three" = "Test 3";
+"Key.Test.Two" = "Test 2";
+"Select an item" = "Select an item";
+
