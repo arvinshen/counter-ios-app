@@ -1,0 +1,30 @@
+## For more info, use `swiftgen config doc` to open the full documentation on GitHub.
+## https://github.com/SwiftGen/SwiftGen/tree/6.6.2/Documentation/
+
+input_dir: ${PROJECT_DIR}/Counter/SwiftGen
+output_dir: ${PROJECT_DIR}/Counter/Resources/Generated
+
+json:
+  inputs: ${PROJECT_DIR}/Counter/Resources
+  filter: .+\.xcstrings$
+  outputs:
+    templatePath: ${PROJECT_DIR}/Counter/SwiftGen/en-strings.stencil
+    output: generated-en.strings
+strings:
+  inputs: ${PROJECT_DIR}/Counter/Resources/Generated/generated-en.strings
+  outputs:
+    templatePath: ${PROJECT_DIR}/Counter/SwiftGen/l21strings.stencil
+    output: ${PROJECT_DIR}/Counter/Resources/Generated/Strings.swift
+#strings:
+#  inputs: Base.lproj
+#  filter: .+\.strings$
+#  outputs:
+#    - templateName: structured-swift5
+#      output: L10n-Constants.swift
+xcassets:
+  inputs: ${PROJECT_DIR}/Counter/Resources/Assets.xcassets
+  outputs:
+    templateName: swift5
+    output: ${PROJECT_DIR}/Counter/Resources/Generated/Assets.swift
+    params:
+        publicAccess: true
