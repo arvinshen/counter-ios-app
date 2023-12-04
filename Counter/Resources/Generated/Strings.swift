@@ -10,16 +10,46 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
-  /// Counter %1$@ at %2$@
-  internal static func counterAt(_ p1: Any, _ p2: Any) -> String {
-    return L10n.tr("Counter %@ at %@", String(describing: p1), String(describing: p2), fallback: "Counter %1$@ at %2$@")
-  }
-  /// Counter at %@
-  internal static func counterAt(_ p1: Any) -> String {
-    return L10n.tr("Counter at %@", String(describing: p1), fallback: "Counter at %@")
-  }
   /// Select an item
   internal static let selectAnItem = L10n.tr("Select an item", fallback: "Select an item")
+  internal enum Common {
+    internal enum Controls {
+      internal enum Actions {
+        /// Save
+        internal static let save = L10n.tr("Common.Controls.Actions.Save", fallback: "Save")
+      }
+    }
+  }
+  internal enum Counter {
+    internal enum Add {
+      internal enum Input {
+        internal enum Name {
+          /// John Doe
+          internal static let placeholder = L10n.tr("Counter.Add.Input.Name.Placeholder", fallback: "John Doe")
+          /// Name
+          internal static let text = L10n.tr("Counter.Add.Input.Name.Text", fallback: "Name")
+        }
+        internal enum Reset {
+          /// 0
+          internal static let placeholder = L10n.tr("Counter.Add.Input.Reset.Placeholder", fallback: "0")
+          /// Reset
+          internal static let text = L10n.tr("Counter.Add.Input.Reset.Text", fallback: "Reset")
+        }
+        internal enum Step {
+          /// Step
+          internal static let text = L10n.tr("Counter.Add.Input.Step.Text", fallback: "Step")
+          /// 0
+          internal static let value = L10n.tr("Counter.Add.Input.Step.Value", fallback: "0")
+        }
+        internal enum Value {
+          /// 0
+          internal static let placeholder = L10n.tr("Counter.Add.Input.Value.Placeholder", fallback: "0")
+          /// Value
+          internal static let text = L10n.tr("Counter.Add.Input.Value.Text", fallback: "Value")
+        }
+      }
+    }
+  }
   internal enum Key {
     internal enum Test {
       /// Test 1

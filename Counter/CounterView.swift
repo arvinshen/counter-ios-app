@@ -18,7 +18,7 @@ struct CounterView: View {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        Text("Counter \(item.count) at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        CounterDetailView(item: item)
                     } label: {
                         Text(item.name)
 //                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
@@ -44,8 +44,10 @@ struct CounterView: View {
                     EditButton()
                 }
                 ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Counter", systemImage: "plus")
+                    NavigationLink(destination: AddCounterView()) {
+                        Button(action: addItem) {
+                            Label("Add Counter", systemImage: "plus")
+                        }
                     }
                 }
             }
@@ -57,7 +59,7 @@ struct CounterView: View {
     private func addItem() {
         withAnimation {
             count += 1
-            let newItem = Counter(name: "Counter \(count)", count: count, timestamp: Date())
+            let newItem = Counter(name: "Counter \(count)", count: count, step: 1, reset: 0, timestamp: Date())
             modelContext.insert(newItem)
         }
     }

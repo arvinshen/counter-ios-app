@@ -28,3 +28,5 @@ xcassets:
     output: ${PROJECT_DIR}/Counter/Resources/Generated/Assets.swift
     params:
         publicAccess: true
+#        forceFileNameEnum: true
+        forceProvidesNamespaces: true
