@@ -6,8 +6,15 @@
 
 
 
-"Counter %@ at %@" = "Counter %1$@ at %2$@";
-"Counter at %@" = "Counter at %@";
+"Common.Controls.Actions.Save" = "Save";
+"Counter.Add.Input.Name.Placeholder" = "John Doe";
+"Counter.Add.Input.Name.Text" = "Name";
+"Counter.Add.Input.Reset.Placeholder" = "0";
+"Counter.Add.Input.Reset.Text" = "Reset";
+"Counter.Add.Input.Step.Text" = "Step";
+"Counter.Add.Input.Step.Value" = "0";
+"Counter.Add.Input.Value.Placeholder" = "0";
+"Counter.Add.Input.Value.Text" = "Value";
 "Key.Test.One" = "Test 1";
 "Key.Test.Three" = "Test 3";
 "Key.Test.Two" = "Test 2";
