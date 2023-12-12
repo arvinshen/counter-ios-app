@@ -14,6 +14,7 @@ struct AddCounterView: View {
     @State private var value: Int?
     @State private var step: Int = 1
     @State private var reset: Int = 0
+    @State private var goal: Int = 100
     
     var body: some View {
         Form {
@@ -41,6 +42,12 @@ struct AddCounterView: View {
                     
                 }
                 .keyboardType(.numberPad)
+                
+                Text(L10n.Counter.Add.Input.Goal.text)
+                TextField(value: $goal, format: .number, prompt: Text(L10n.Counter.Add.Input.Goal.placeholder)) {
+                    
+                }
+                .keyboardType(.numberPad)
             }
         }
         .toolbar {
@@ -53,7 +60,7 @@ struct AddCounterView: View {
     }
     
     private func saveCounter() {
-        let newItem = Counter(name: name, count: value ?? 0, step: step, reset: reset, timestamp: Date())
+        let newItem = Counter(name: name, count: value ?? 0, step: step, reset: reset, goal: goal, timestamp: Date())
         modelContext.insert(newItem)
         dismiss()
     }

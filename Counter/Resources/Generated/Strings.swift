@@ -23,6 +23,12 @@ internal enum L10n {
   internal enum Counter {
     internal enum Add {
       internal enum Input {
+        internal enum Goal {
+          /// 100
+          internal static let placeholder = L10n.tr("Counter.Add.Input.Goal.Placeholder", fallback: "100")
+          /// Goal
+          internal static let text = L10n.tr("Counter.Add.Input.Goal.Text", fallback: "Goal")
+        }
         internal enum Name {
           /// John Doe
           internal static let placeholder = L10n.tr("Counter.Add.Input.Name.Placeholder", fallback: "John Doe")

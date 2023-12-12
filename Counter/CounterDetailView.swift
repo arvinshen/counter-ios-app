@@ -16,24 +16,30 @@ struct CounterDetailView: View {
         NavigationStack {
             VStack {
                 Spacer()
-                Text("\(item.count)")
-                    .frame(width: 200, height: 200)
-                    .scaledToFill()
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
+                CircularProgressBarView(total: item.goal, completed: item.count)
+//                Text("\(item.count)")
+//                    .frame(width: 200, height: 200)
+//                    .scaledToFill()
+//                    .font(.largeTitle)
+//                    .fontWeight(.bold)
                 Spacer()
                 HStack {
                     Button(action: decrement) {
                         Label("", systemImage: "minus.circle")
                     }
+                    .scaleEffect(2)
+                    .padding(8)
                     Button(action: reset) {
                         Label("", systemImage: "arrow.counterclockwise.circle")
                     }
+                    .scaleEffect(2)
+                    .padding(8)
                     Button(action: increment) {
                         Label("", systemImage: "plus.circle")
                     }
+                    .scaleEffect(2)
+                    .padding(8)
                 }
-                Spacer()
             }
         }
         .navigationTitle(item.name)

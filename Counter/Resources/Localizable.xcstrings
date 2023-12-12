@@ -15,6 +15,28 @@
         }
       }
     },
+    "Counter.Add.Input.Goal.Placeholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "100"
+          }
+        }
+      }
+    },
+    "Counter.Add.Input.Goal.Text" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Goal"
+          }
+        }
+      }
+    },
     "Counter.Add.Input.Name.Placeholder" : {
       "extractionState" : "manual",
       "localizations" : {

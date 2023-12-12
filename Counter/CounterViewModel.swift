@@ -10,7 +10,7 @@ import SwiftData
 
 @Observable
 class CounterViewModel {
-    private var model: Counter = Counter(name: "", count: 0, step: 1, reset: 0, timestamp: Date())
+    private var model: Counter = Counter(name: "", count: 0, step: 1, reset: 0, goal: 100, timestamp: Date())
     var modelContext: ModelContext
     var counters = [Counter]()
 
@@ -20,7 +20,7 @@ class CounterViewModel {
     }
 
     func addSample() {
-        let counter = Counter(name: "Johnny Test", count: 0, step: 1, reset: 0, timestamp: Date())
+        let counter = Counter(name: "Johnny Test", count: 0, step: 1, reset: 0, goal: 100, timestamp: Date())
         modelContext.insert(counter)
         fetchData()
     }
