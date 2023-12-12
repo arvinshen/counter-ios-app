@@ -14,18 +14,20 @@ final class Counter {
     var count: Int
     var step: Int
     var reset: Int
+    var goal: Int
     var timestamp: Date
 
-    init(name: String, count: Int, step: Int, reset: Int, timestamp: Date) {
+    init(name: String, count: Int, step: Int, reset: Int, goal: Int, timestamp: Date) {
         self.name = name
         self.count = count
         self.step = step
         self.reset = reset
+        self.goal = goal
         self.timestamp = timestamp
     }
     
     static let preview: Counter = {
-        Counter(name: "Johnny Test", count: 0, step: 1, reset: 0, timestamp: Date())
+        Counter(name: "Johnny Test", count: 0, step: 1, reset: 0, goal: 100, timestamp: Date())
     }()
     
     @MainActor
@@ -35,7 +37,7 @@ final class Counter {
             let container = try ModelContainer(for: Counter.self, configurations: config)
 
             for i in 1...9 {
-                let counter = Counter(name: "Example User \(i)", count: i, step: i, reset: 0, timestamp: Date())
+                let counter = Counter(name: "Example User \(i)", count: i, step: i, reset: 0, goal: 100, timestamp: Date())
                 container.mainContext.insert(counter)
             }
 

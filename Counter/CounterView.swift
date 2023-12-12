@@ -59,7 +59,7 @@ struct CounterView: View {
     private func addItem() {
         withAnimation {
             count += 1
-            let newItem = Counter(name: "Counter \(count)", count: count, step: 1, reset: 0, timestamp: Date())
+            let newItem = Counter(name: "Counter \(count)", count: count, step: 1, reset: 0, goal: 100, timestamp: Date())
             modelContext.insert(newItem)
         }
     }

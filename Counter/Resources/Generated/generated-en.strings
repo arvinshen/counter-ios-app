@@ -7,6 +7,8 @@
 
 
 "Common.Controls.Actions.Save" = "Save";
+"Counter.Add.Input.Goal.Placeholder" = "100";
+"Counter.Add.Input.Goal.Text" = "Goal";
 "Counter.Add.Input.Name.Placeholder" = "John Doe";
 "Counter.Add.Input.Name.Text" = "Name";
 "Counter.Add.Input.Reset.Placeholder" = "0";
