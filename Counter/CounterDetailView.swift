@@ -17,11 +17,6 @@ struct CounterDetailView: View {
             VStack {
                 Spacer()
                 CircularProgressBarView(total: item.goal, completed: item.count)
-//                Text("\(item.count)")
-//                    .frame(width: 200, height: 200)
-//                    .scaledToFill()
-//                    .font(.largeTitle)
-//                    .fontWeight(.bold)
                 Spacer()
                 HStack {
                     Button(action: decrement) {

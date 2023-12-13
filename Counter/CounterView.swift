@@ -21,20 +21,8 @@ struct CounterView: View {
                         CounterDetailView(item: item)
                     } label: {
                         Text(item.name)
-//                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
                     }
                     .listRowSeparator(.hidden)
-//                    .listRowBackground(
-//                        RoundedRectangle(cornerRadius: 5)
-//                            .padding(
-//                                EdgeInsets(
-//                                    top: 2,
-//                                    leading: 10,
-//                                    bottom: 2,
-//                                    trailing: 10
-//                                )
-//                            )
-//                    )
                 }
                 .onDelete(perform: deleteItems)
             }
@@ -51,6 +39,8 @@ struct CounterView: View {
                     }
                 }
             }
+            .navigationTitle(L10n.Counter.title)
+            .navigationBarTitleDisplayMode(.inline)
         } detail: {
             Text("Select an item")
         }

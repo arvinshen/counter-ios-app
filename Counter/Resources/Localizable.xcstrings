@@ -125,6 +125,17 @@
         }
       }
     },
+    "Counter.Title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Counter"
+          }
+        }
+      }
+    },
     "Key.Test.One" : {
       "extractionState" : "manual",
       "localizations" : {

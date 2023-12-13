@@ -21,6 +21,8 @@ internal enum L10n {
     }
   }
   internal enum Counter {
+    /// Counter
+    internal static let title = L10n.tr("Counter.Title", fallback: "Counter")
     internal enum Add {
       internal enum Input {
         internal enum Goal {

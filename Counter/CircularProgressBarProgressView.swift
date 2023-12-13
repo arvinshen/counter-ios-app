@@ -28,7 +28,6 @@ struct CircularProgressBarProgressView: View {
             Text("\(completed)")
                 .fontWeight(.bold)
                 .font(.system(size: 16 * scale))
-//                .scaleEffect(5)
         }
     }
 }
